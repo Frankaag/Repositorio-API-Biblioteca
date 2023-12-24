@@ -44,22 +44,17 @@ def obtener_todos_los_libros():
         }
         libros_json.append(libro_dict)
 
-    print(libros_json)  # Agrega esta línea para imprimir la lista de libros
+    print(libros_json)  
 
     return jsonify(libros_json)
 
-# Resto de las rutas de la API...
+# Resto de las rutas de la API
 
 if __name__ == '__main__':
     with app.app_context():
         app.run(debug=True)
 
 
-
-
-# ... (resto del código)
-
-# Rutas de la API
 
 # Obtener un libro por ID
 @app.route('/libros/<int:libro_id>', methods=['GET'])
@@ -128,4 +123,3 @@ def eliminar_libro(libro_id):
     
     return jsonify({'mensaje': 'Libro eliminado correctamente'})
 
-# ... (resto del código)

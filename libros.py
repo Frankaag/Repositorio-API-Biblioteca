@@ -1,4 +1,3 @@
-# libros.py
 
 import sqlite3
 
